@@ -12,4 +12,10 @@ describe("Array", function () {
 
     console.info(hobbies[0]);
   });
+
+  it("should be readonly tuples", function () {
+    const person: readonly [string, string, number] = ["Rizki", "Male", 19];
+
+    console.info(person);
+  });
 });
