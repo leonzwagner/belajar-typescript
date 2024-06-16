@@ -12,7 +12,7 @@ describe("Interface", function () {
     console.info(employee);
   });
 
-  it("should support function in interface", function () {
+  it("should support function in interface", function (): void {
     const person: Person = {
       name: "Rizki",
       sayHello: function (name: string): string {
