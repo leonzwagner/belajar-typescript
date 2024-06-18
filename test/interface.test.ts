@@ -79,4 +79,35 @@ describe("Interface", function () {
     expect(dictionary["name"]).toBe("Akhadi");
     expect(dictionary["address"]).toBe("Indonesia");
   });
+
+  it("Intersection types", function () {
+    interface HasName {
+      name: string;
+    }
+
+    interface HasId {
+      id: string;
+    }
+
+    type Domain = HasId & HasName;
+
+    const domain: Domain = {
+      id: "1",
+      name: "Rizki",
+    };
+
+    console.info(domain);
+  });
+
+  it("should support type assertion", function () {
+    const person: any = {
+      name: "Rizki",
+      age: 19,
+    };
+
+    const person2: Person = person as Person;
+    /*     person2.sayHello("Budi"); */
+
+    console.info(person2);
+  });
 });
